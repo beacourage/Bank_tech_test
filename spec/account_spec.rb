@@ -15,6 +15,18 @@ INITIAL_BALANCE = Account::INITIAL_BALANCE
       end
     end
 
-  
+    describe "#transactions" do
+      it "responds to transactions" do
+        account = Account.new
+        expect(account).to respond_to(:transactions)
+      end
+
+      it "Initialize emply transactions array" do
+        account = Account.new
+        expect(account.transactions).to eq([])
+      end
+    end
+
+
 
   end

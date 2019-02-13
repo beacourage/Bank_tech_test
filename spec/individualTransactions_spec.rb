@@ -47,6 +47,11 @@ require 'individualTransactions'
     describe "#date" do
       it "responds to date" do
         transaction = IndividualTransactions.new
+        expect(transaction).to respond_to(:date)
+      end
+
+      it "The date of transaction is the current date" do
+        transaction = IndividualTransactions.new
         expect(transaction.date).to eq(Time.now.strftime("%d/%m/%Y"))
       end
     end

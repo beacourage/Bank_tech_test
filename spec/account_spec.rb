@@ -1,7 +1,9 @@
 require 'account'
+require 'individualTransactions'
 
 
   describe Account do
+
 INITIAL_BALANCE = Account::INITIAL_BALANCE
     describe "#balance" do
       it "responds to balance" do
@@ -21,7 +23,7 @@ INITIAL_BALANCE = Account::INITIAL_BALANCE
         expect(account).to respond_to(:transactions)
       end
 
-      it "Initialize emply transactions array" do
+      it "Initialize empty transactions array" do
         account = Account.new
         expect(account.transactions).to eq([])
       end
@@ -36,12 +38,17 @@ INITIAL_BALANCE = Account::INITIAL_BALANCE
       it "Deposit method adds the amount to total balance" do
         account = Account.new
         amount = 12
+        # expect{ account.deposit(amount) }.to change { account.balance }.by(12)
         account.deposit(amount)
         expect(account.balance).to eq 12
-
       end
 
     end
 
-
+    describe "#withdraw" do
+      it "Account class responds to withdraw method" do
+        account = Account.new
+        expect(account).to respond_to(:withdraw).with(1).argument
+      end
+    end
   end

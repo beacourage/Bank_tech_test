@@ -9,4 +9,7 @@ attr_accessor :balance, :transactions
     @transactions = []
   end
 
+  def deposit(amount)
+    @balance += amount
+  end
 end

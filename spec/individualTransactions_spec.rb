@@ -1,8 +1,11 @@
 require 'individualTransactions'
 
   describe IndividualTransactions do
+
   INITIAL_BALANCE = IndividualTransactions::INITIAL_BALANCE
   INITIAL_CREDIT = IndividualTransactions::INITIAL_CREDIT
+  INITIAL_DEBIT = IndividualTransactions::INITIAL_DEBIT
+
     describe "#totalbalance" do
       it "responds to total_balance" do
         transaction = IndividualTransactions.new
@@ -29,4 +32,22 @@ require 'individualTransactions'
       end
     end
 
-  end
+    describe "#debit" do
+      it "responds to debit" do
+        transaction = IndividualTransactions.new
+        expect(transaction).to respond_to(:debit)
+      end
+
+      it "There is initial debit of 0" do
+        transaction = IndividualTransactions.new
+        expect(transaction.debit).to eq(INITIAL_DEBIT)
+      end
+    end
+
+    describe "#date" do
+      it "responds to date" do
+        transaction = IndividualTransactions.new
+        expect(transaction.date).to eq(Time.now.strftime("%d/%m/%Y"))
+      end
+    end
+end

@@ -1,4 +1,4 @@
-require 'individualTransactions'
+require_relative 'individualTransactions'
 
 class Account
 
@@ -12,15 +12,16 @@ attr_accessor :balance, :transactions, :date
     @date = Time.now.strftime("%d/%m/%Y")
   end
 
-  def deposit(credit)
-    debit = 0
-    @balance += credit
-    @transactions << IndividualTransactions.new(date, credit, debit, balance)
+  def deposit(amount)
+    @balance += amount
+    @transactions << IndividualTransactions.new(date, amount, 0, balance )
   end
 
 
-  # def withdraw(debit)
-  #   credit =
+  def withdraw(amount)
+    @balance -= amount
+    @transactions << IndividualTransactions.new(date, 0, amount, balance)
+  end
 
 
 

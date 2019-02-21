@@ -19,7 +19,6 @@ require 'individualTransactions'
 
     end
 
-
     describe "#credit" do
       it "responds to credit" do
         transaction = IndividualTransactions.new
@@ -52,7 +51,8 @@ require 'individualTransactions'
 
       it "The date of transaction is the current date" do
         transaction = IndividualTransactions.new
-        expect(transaction.date).to eq(Time.now.strftime("%d/%m/%Y"))
+        date = 2
+        expect(transaction.date).to eq('date')
       end
     end
 end

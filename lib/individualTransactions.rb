@@ -6,7 +6,7 @@ INITIAL_DEBIT = 0
 
   attr_accessor :total_balance, :credit, :debit, :date
 
-  def initialize (date = Time.now.strftime("%d/%m/%Y"), credit = INITIAL_CREDIT, debit = INITIAL_DEBIT, total_balance = INITIAL_BALANCE)
+  def initialize (date = 'date', credit = INITIAL_CREDIT, debit = INITIAL_DEBIT, total_balance = INITIAL_BALANCE)
     @date = date
     @credit = credit
     @debit = debit

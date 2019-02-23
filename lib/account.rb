@@ -19,6 +19,7 @@ attr_accessor :amount_change, :transactions, :date, :head
     @transactions << IndividualTransactions.new(date, amount, 0, amount_change )
   end
 
+# (date, credit, debit, totalbalance )
 
   def withdraw(amount)
     @amount_change -= amount
@@ -26,13 +27,13 @@ attr_accessor :amount_change, :transactions, :date, :head
   end
 
   def head
-    @head = " date || credit || debit || balance\n"
+    @head = "date       || credit || debit || balance\n"
   end
 
   def print_statement
     body_of_statement = ""
     @transactions.each do |transaction|
-      body_of_statement << "#{transaction.date} || #{transaction.credit} || #{transaction.debit}  || #{transaction.total_balance}\n"
+      body_of_statement << "#{transaction.date} || #{transaction.credit}      || #{transaction.debit}     || #{transaction.total_balance}\n"
     end
    puts head + body_of_statement
  end

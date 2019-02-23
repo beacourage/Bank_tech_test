@@ -83,26 +83,17 @@ INITIAL_AMOUNT = Account::INITIAL_AMOUNT
 
       it "Responds to print statement method" do
         account = Account.new
-        expect(account).to respond_to(:print_statement)
+        expect(account).to respond=_to(:print_statement)
       end
 
-      it "head method outputs contents of head" do
-        account = Account.new
-        expect(account.head).to eq(" date || credit || debit || balance")
-      end
 
-      it "Print statement method outputs contents of head" do
-        account = Account.new
-        expect(account.print_statement).to eq(" date || credit || debit || balance")
-      end
 
-      it 'is a feature test' do
+      it 'Print statement prints the account statement' do
         account = Account.new
         account.withdraw(9)
         account.deposit(7)
-        expect { account.print_statement }.to output(" date || credit || debit || balance15/02/2019 || 0 || 9  || -9\n15/02/2019 || 7 || 0  || -2\n").to_stdout
+        expect { account.print_statement }.to output("date       || credit || debit || balance\n23/02/2019 || 0      || 9     || -9\n23/02/2019 || 7      || 0     || -2\n").to_stdout
       end
-
 
 
       # it "Printstatement outputs the body of the table" do

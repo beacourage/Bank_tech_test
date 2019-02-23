@@ -1,4 +1,5 @@
 require 'account'
+require 'printStatement'
 # require 'individualTransactions'
 
 
@@ -83,7 +84,7 @@ INITIAL_AMOUNT = Account::INITIAL_AMOUNT
 
       it "Responds to print statement method" do
         account = Account.new
-        expect(account).to respond=_to(:print_statement)
+        expect(account.printstatement).to respond_to(:print_statement)
       end
 
 
@@ -92,7 +93,7 @@ INITIAL_AMOUNT = Account::INITIAL_AMOUNT
         account = Account.new
         account.withdraw(9)
         account.deposit(7)
-        expect { account.print_statement }.to output("date       || credit || debit || balance\n23/02/2019 || 0      || 9     || -9\n23/02/2019 || 7      || 0     || -2\n").to_stdout
+        expect { account.printstatement.print_statement }.to output("date       || credit || debit || balance\n23/02/2019 || 0      || 9     || -9\n23/02/2019 || 7      || 0     || -2\n").to_stdout
       end
 
 

@@ -41,3 +41,32 @@ I would like to see my bank statement which includes date, credit, debit, balanc
 
 
 ```
+Set Up
+-----
+* Clone this repository
+```
+$ git clone git@github.com:beacourage/Bank_tech_test.git
+```
+* Go into the Bank_tech_test repository
+```
+$ cd Bank_tech_test
+```
+* Install gems contained in the Gemfile
+```
+$ bundle install
+```
+* Run tests from root of the directory, to see all tests passing
+```
+$ rspec
+```
+Running the App
+-----
+
+* From the command line, launch irb to interact with code, and require the necessary files.
+
+```
+$ irb
+$ require './lib/account'
+```
+
+* Running the app from the command line:

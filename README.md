@@ -1,4 +1,4 @@
-# Bank tech test - Beatrice Courage
+# Beatrice Courage - Bank tech test 
 
 
 # Makers Academy Specification

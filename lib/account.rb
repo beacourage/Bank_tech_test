@@ -4,12 +4,11 @@ class Account
 
 INITIAL_AMOUNT = 0
 
-attr_accessor :amount_change,:date, :head, :printstatement
+attr_accessor :amount_change,:date, :printstatement
 
   def initialize(initial_amount = INITIAL_AMOUNT)
     @amount_change = initial_amount
     @date = Time.now.strftime("%d/%m/%Y")
-    @head = head
     @printstatement = PrintStatement.new
   end
 

@@ -1,10 +1,9 @@
 class PrintStatement
 
-attr_accessor :transactions, :head
+attr_accessor :transactions
 
   def initialize
     @transactions = []
-    @head = head
   end
 
   def head

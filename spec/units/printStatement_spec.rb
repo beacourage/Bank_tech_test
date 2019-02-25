@@ -32,7 +32,7 @@ let(:subject){ PrintStatement.new}
   end
 
   it "Ensures a new instance of printstatement is created" do
-    expcet(subject).to be_an_instance_of(PrintStatement)
+    expect(subject).to be_an_instance_of(PrintStatement)
   end
 
 

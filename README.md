@@ -1,7 +1,7 @@
-# Bank tech test
+# Bank tech test - Beatrice Courage
 
 
-# Specification
+# Makers Academy Specification
 
 Requirements
 -----
@@ -24,6 +24,11 @@ date       || credit || debit   || balance
 13/01/2012 || 2000.00||         || 3000.00
 10/01/2012 || 1000.00||         || 1000.00
 ```
+
+
+# Bank Tech Test:
+
+
 User Stories
 -----
 ```
@@ -41,6 +46,21 @@ I would like to see my bank statement which includes date, credit, debit, balanc
 
 
 ```
+Testing
+-----
+* A strict TDD process was used throughout
+* Consists of  both feature and unit tests - all tests passing - 25 passing tests
+* Each test has a clear test description
+* RSpec was the testing framework used
+* The TDD approach used was the 'red green refactor' loop. This involves first writing a failing test, and then producing a minimum amount of code to pass that test.
+
+Design
+-----
+* Program consists of three separate classes that can be reasonably justified
+* All methods are fewer than 7 lines
+* All classes are fewer than 30 lines
+
+
 Set Up
 -----
 * Clone this repository
@@ -55,7 +75,7 @@ $ cd Bank_tech_test
 ```
 $ bundle install
 ```
-* Run tests from root of the directory, to see all tests passing
+* Run tests from root of the directory to see all tests passing
 ```
 $ rspec
 ```
@@ -71,4 +91,4 @@ $ require './lib/account'
 
 * Running the app from the command line:
 
- ![Screenshot](Screenshot.png)
+ ![Screenshot](Screenshot1.png)

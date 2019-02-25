@@ -1,4 +1,4 @@
-# Beatrice Courage - Bank tech test 
+# Beatrice Courage - Bank tech test
 
 
 # Makers Academy Specification
@@ -42,8 +42,6 @@ I would like to make a withdrawal.
 As a user,
 So that I know how much money I have,
 I would like to see my bank statement which includes date, credit, debit, balance.
-
-
 ```
 Testing
 -----

@@ -70,3 +70,5 @@ $ require './lib/account'
 ```
 
 * Running the app from the command line:
+
+ ![Screenshot](Screenshot.png)

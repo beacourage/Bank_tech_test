@@ -26,7 +26,7 @@ date       || credit || debit   || balance
 ```
 
 
-# Bank Tech Test:
+# Completed Bank Tech Test:
 
 
 User Stories
@@ -51,8 +51,8 @@ Testing
 * A strict TDD process was used throughout
 * Consists of  both feature and unit tests - all tests passing - 25 passing tests
 * Each test has a clear test description
-* RSpec was the testing framework used
-* The TDD approach used was the 'red green refactor' loop. This involves first writing a failing test, and then producing a minimum amount of code to pass that test.
+* Testing framework - RSpec
+* TDD approach - 'Red Green Refactor' loop. This involves first writing a failing test, and then producing a minimum amount of code to pass that test.
 
 Design
 -----

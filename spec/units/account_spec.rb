@@ -2,8 +2,12 @@ require 'account'
 
 describe Account do
 
-let(:subject){ Account.new}
 INITIAL_AMOUNT = Account::INITIAL_AMOUNT
+
+  let(:subject){ Account.new}
+  let(:individualTransactions) { double('individual transaction mock', :debit => 10)}
+
+
     describe "#balance" do
       it "responds to balance" do
         expect(subject).to respond_to(:amount_change)
@@ -25,7 +29,15 @@ INITIAL_AMOUNT = Account::INITIAL_AMOUNT
         account = Account.new
         expect(account.printstatement.transactions).to eq([])
       end
+
+      it "Returns an array with transactions" do
+      allow(subject.printstatement).to receive(:transactions).and_return([individualTransactions])
+      expect(subject.printstatement.transactions).to eq([individualTransactions])
+      end
+
     end
+
+
 
     describe '#deposit' do
       it 'Account class responds to desposit method' do

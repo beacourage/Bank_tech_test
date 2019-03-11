@@ -31,12 +31,11 @@ INITIAL_AMOUNT = Account::INITIAL_AMOUNT
       end
 
       it "Returns an array with transactions" do
-      allow(subject.printstatement).to receive(:transactions).and_return([individualTransactions])
-      expect(subject.printstatement.transactions).to eq([individualTransactions])
+        allow(subject.printstatement).to receive(:transactions).and_return([individualTransactions])
+        expect(subject.printstatement.transactions).to eq([individualTransactions])
       end
 
     end
-
 
 
     describe '#deposit' do
@@ -77,4 +76,4 @@ INITIAL_AMOUNT = Account::INITIAL_AMOUNT
       end
 
       end
-    end
+  end
